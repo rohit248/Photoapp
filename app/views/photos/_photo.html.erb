@@ -1,0 +1,11 @@
+<li class="col-xs-3">
+  
+           <a href="<%= photo.image.url %>"> <img src="<%= photo.image.url %>" height="180" width="180" ></a>
+  <% if photo.image_name.present? %>
+    <p><%= photo.image_name %></p>
+  <% end %>
+
+  <% if photo.author.present? %>
+    <p><b>Author:</b> <%= photo.author %></p>
+  <% end %>
+</li>

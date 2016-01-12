@@ -1,0 +1,29 @@
+
+
+<button id="show">Upload pic</button>
+
+
+
+
+<div id="bb">
+<h3>Upload one photo </h3>
+<%= form_for @photo, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, required: true %>
+  </div>
+
+  <%= f.submit 'Submit', class: 'btn btn-primary btn-lg', :id => 'ml' %>
+
+<% end %>
+</div>
+
+<ul class="row" id="photos-list">
+<h3 style="margin-left: 50px;">Previously Uploaded photos</h3>
+  <%= render @photos %>
+</ul>
